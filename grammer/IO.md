@@ -32,4 +32,11 @@ arr = [list(map(int, input().split())) for _ in range(4)]
 string = [input() for _ in range(3)]
 ```
 
+<br>
+
+**4. 빠른 입력 받기**
+```py
+import sys
+num = int(sys.stdin.readline())
+```
 사실 map이 반환하는 맵 객체는 iterater라서 변수 여러 개에 저장하는 언패킹(unpacking)이 가능하다.
