@@ -1,4 +1,3 @@
-
 # 리스트 정리
 ## 인덱싱
 ```py
@@ -64,4 +63,28 @@ strList = ['a', 'a', 'aa', 'a', 'b']
 strList = list(dict.fromkeys(strList))
 # 순서 신경 안쓰고 리스트 중복 제거
 strList = list(set(strList))
+```
+
+## 자주 쓰이는 함수
+```py
+#### 문자열과 숫자 구분하는 함수
+text1 = 'abcd' 
+text1.isalpha() # True 
+text2 = 1234 
+text2.isalnum() # True
+
+#### 값을 순회할 때 조건을 걸고 싶을 때
+string = '0001100' 
+res = list(filter(lambda x: string[x]=='0', range(len(string)))) # [0, 1, 2, 5, 6]
+
+#### itertools
+items = ['1', '2', '3', '4', '5'] 
+
+# 중복 허용할 때! (순열)  
+from itertools import permutations 
+list(permutations(items, 2)) # [('1', '2'), ('1', '3'), ('1', '4'), ('1', '5'), ('2', '1'), ('2', '3'), ('2', '4'), ('2', '5'), ('3', '1'), ('3', '2'), ('3', '4'), ('3', '5'), ('4', '1'), ('4', '2'), ('4', '3'), ('4', '5'), ('5', '1'), ('5', '2'), ('5', '3'), ('5', '4')] 
+
+# 중복 허용하지 않을 때! (조합)  
+from itertools import combinations 
+list(combinations(items, 2)) # [('1', '2'), ('1', '3'), ('1', '4'), ('1', '5'), ('2', '3'), ('2', '4'), ('2', '5'), ('3', '4'), ('3', '5'), ('4', '5')]
 ```
