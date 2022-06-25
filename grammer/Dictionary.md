@@ -19,7 +19,8 @@ my_dic['d'] = 15
 # DELETE
 # del 이용하기 - 키가 있는 경우  
 dict = {'김철수': 300, 'Anna': 180} 
-del  dict['김철수'] dict  #{'Anna': 180}
+del  dict['김철수'] 
+dict  #{'Anna': 180}
 
 # del 이용하기 - 키가 없는 경우 raise KeyError 
 my_dict = {'김철수': 300, 'Anna': 180} 
