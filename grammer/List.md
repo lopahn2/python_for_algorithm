@@ -1,3 +1,4 @@
+
 # 리스트 정리
 ## 인덱싱
 ```py
@@ -67,6 +68,12 @@ strList = list(set(strList))
 
 ## 자주 쓰이는 함수
 ```py
+#### 문자의 개수 찾기
+countList = [1,2,2,3,3,3]
+countList.count(1) # 1
+countList.count(2) # 2
+countList.count(3) # 3
+
 #### 문자열과 숫자 구분하는 함수
 text1 = 'abcd' 
 text1.isalpha() # True 
