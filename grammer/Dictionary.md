@@ -68,5 +68,9 @@ d = {"dream": 0, "car": 99, "blockdmask": 1, "error": 30, "app": 20}
 # value로 오름차순
 d2 = sorted(d.items(), key=lambda x: x[1])
 
+result = {1: 1, 2: 3, 3: 2}
+
+# value로 내림차순
+sorted(result, key=lambda x : result[x], reverse=True)
 ```
 
