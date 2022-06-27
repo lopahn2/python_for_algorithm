@@ -58,5 +58,15 @@ check_hash = {}
 for member in mebers:
 	check_hash[hash(member)] = member
 ```
-파이썬 내장 hash 함수로 값을 해싱할 수 있고 이는 특정 값을 고유한 숫자로 표현할 때 사용한다. 
+파이썬 내장 hash 함수로 값을 해싱할 수 있고 이는 특정 값을 고유한 숫자로 표현할 때 사용한다. <br>
+
+## 정렬
+
+```py
+d = {"dream": 0, "car": 99, "blockdmask": 1, "error": 30, "app": 20}
+
+# value로 오름차순
+d2 = sorted(d.items(), key=lambda x: x[1])
+
+```
 
