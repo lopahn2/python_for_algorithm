@@ -3,48 +3,39 @@
 ## 진수 변환
 
 ```py
-a = 200
+# bin(number) => number를 binary 문자열로 변환한다.
+# 결과값은 0b를 붙여 나오므로 문자열 슬라이싱을 진행한다.
 
-# 접두어 포함
-b = '{:#b}'.format(a)
-print(f"2진수 : {b}")
+# 사용 예시
+def solution(n, arr1, arr2):
+    # 어느 하나라도 벽이면 벽임
+    # 모두 공백은 공백임
+    secretMap = []
+    for i in range(n):
+        check = bin(arr1[i] | arr2[i])[2:].zfill(n)
+        check = check.replace('1', '#')
+        check = check.replace('0', ' ')
+        secretMap.append(check)
+            
+   
+    return secretMap
+```
 
-c = '{:#o}'.format(a)
-print(f"8진수 : {c}")
+## zfill(n), ljust, rjust, center
 
-d = '{:#x}'.format(a)
-print(f"16진수 : {d}")
+n 자리수의 껍데기에 맞추어서 숫자 앞에 0을 붙여 넣는다. <br>
+ljust, rjust, center (자릿수, 넣을 문자 (default = 공백)) <br>
 
-b = format(a, '#b')
-print(f"2진수 : {b}")
+```py
+print('123'.zfill(5)) # 00123
 
-c = format(a, '#o')
-print(f"8진수 : {c}")
+print('123'.ljust(5)) # 123
+print('123'.rjust(5)) #   123
+print('123'.center(5)) # 123 
 
-d = format(a, '#x')
-print(f"16진수 : {d}")
+print('123'.ljust(5,'*')) # 123**
+print('123'.rjust(5,'*')) # **123
+print('123'.center(5,'*')) # *123*
 
-[결과]
-2진수 : 0b11001000
-8진수 : 0o310
-16진수 : 0xc8
-2진수 : 0b11001000
-8진수 : 0o310
-16진수 : 0xc8
-
-# 접두어 제외
-b = format(a, 'b')
-print(f"2진수 : {b}")
-
-c = format(a, 'o')
-print(f"8진수 : {c}")
-
-d = format(a, 'x')
-print(f"16진수 : {d}")
-
-[결과]
-2진수 : 11001000
-8진수 : 310
-16진수 : c8
 ```
 
