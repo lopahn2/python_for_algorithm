@@ -7,6 +7,10 @@ string_ = "hello"
 
 string_[0:2] # he
 len(string_) # 5
+
+# 문자열 뒤집기
+
+string_[::-1] # olleh
 ```
 
 ## 문자열 찾기
