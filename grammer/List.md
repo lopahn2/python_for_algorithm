@@ -66,6 +66,49 @@ strList = list(dict.fromkeys(strList))
 strList = list(set(strList))
 ```
 
+## ZIP 함수
+`zip()`  함수는 여러 개의 순회 가능한 객체를 인자로 받고, 각 객체가 담고 있는 원소를 tuple의 형태로 차례로 접근할 수 있는 반복자를 반환한다.
+
+```py
+>>> numbers = [1, 2, 3]
+>>> letters = ["A", "B", "C"]
+>>> for pair in zip(numbers, letters):
+...     print(pair)
+...
+(1, 'A')
+(2, 'B')
+(3, 'C')
+```
+
+### 다시 분리하기!
+```py
+>>> numbers = (1, 2, 3)
+>>> letters = ("A", "B", "C")
+>>> pairs = list(zip(numbers, letters))
+>>> print(pairs)
+[(1, 'A'), (2, 'B'), (3, 'C')]
+```
+
+### 딕셔너리에 활용
+```py
+>>> keys = [1, 2, 3]
+>>> values = ["A", "B", "C"]
+>>> dict(zip(keys, values))
+{1: 'A', 2: 'B', 3: 'C'}
+```
+
+## enumerate 함수
+```py
+lst = ['a','b','c','d']
+for i, k in enumerate(lst):
+    print(i,k)
+
+(0,'a')
+(1,'b')
+(2,'c')
+(3,'d')
+```
+
 ## 자주 쓰이는 함수
 ```py
 #### 문자의 개수 찾기
