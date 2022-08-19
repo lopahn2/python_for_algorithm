@@ -108,3 +108,46 @@ text_str.replace(" ", "") # 안녕하세요저는화니에요​
 string_.isalpha() # 알파벳이면 True
 string_.isdigit() # 숫자면 True
 ```
+
+## 문자 찾기
+### find(찾을문자, 찾기시작할위치)
+```python
+>>> s = '가나다라 마바사아 자차카타 파하'
+>>> s.find('마')
+5
+>>> s.find('가')
+0
+>>> s.find('가',5)
+-1
+```
+find는 문자열중에 특정문자를 찾고 위치를 반환해준다, 없을경우 -1을 리턴 <br>
+### startswith(시작하는문자, 시작지점)
+```python
+>>> s = '가나다라 마바사아 자차카타 파하'
+>>> s.startswith('가나다')
+True
+>>> s.startswith('마')
+False
+
+>>> s.startswith('마',s.find('마')) #find는 '마' 의 시작지점을 알려줌 : 5
+True
+>>> s.startswith('마',1)
+False
+```
+startswith는 문자열이 특정문자열로 시작하는지 여부를 알려준다 <br>
+두번째 인자를 넣음으로써 찾기시작할 지점을 정할수있다. <br>
+
+### endswith(끝나는문자, 문자열의시작, 문자열의끝)
+```python
+>>> s = '가나다라 마바사아 자차카타 파하'
+>>> s.endswith('마')
+False
+>>> s.endswith('하')
+True
+
+>>> s.endswith('마',0,10)
+False
+>>> s.endswith('마',0,6)
+True
+```
+endswith는 문자열이 특정문자로 끝나는지 여부를 알려준다.
